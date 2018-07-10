@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700');
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+
+body{
+	background: black;
+	color:aliceblue;
+	font-family: 'IBM Plex Sans',Arial, sans-serif;
+	text-align:center;
+}
+h1{
+	font-family:'Courgette', cursive;
+	margin-bottom:1.5em;
+}
+h1 strong{
+	font-size:1.3em;
+}
+h1,h2 span{
+	font-size: 55px;
+	color:cornflowerblue;
+}
+h2{
+	font-size: 45px;
+	color:lawngreen;
+}
+h2 hr{
+    overflow: visible;
+    padding: 0;
+    margin:0;
+    border: none;
+    border-top: medium double gainsboro;
+    color: gainsboro;
+}
+h2 hr:after {
+    content: "I can help with";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.4em;
+    padding: 0 0.15em;
+    background:black;
+}
+.title-wrapper{
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+}
+span#day{
+	flex:3 0px;
+	font-size: 76px;
+}
+span.spacer{
+	width:255px;
+	font-size: 36px;
+}
+#mhframe{
+	display:none;
+}
+.footer{
+	color:pink;
+}
+.footer span{
+	color:hotpink;
+}
+/*Utility classes for JS*/
+.scanned{
+	animation:success 3s;
+}
+.friday{
+	animation:friday-colours 6s infinite;
+}
+@keyframes friday-colours{
+	0% {color:red;}
+	12% {color:orange;}
+	25% {color:yellow;}
+	37% {color:aquamarine;}
+	50% {color:cyan;}
+	62% {color:dodgerblue;}
+	75% {color:orchid;}
+	87% {color:fuchsia;}
+	100%{color:red;}
+}

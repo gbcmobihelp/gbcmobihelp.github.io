@@ -1,0 +1,66 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href=".\assets\style\splash.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Written by Jerome -->
+	</head>
+	<body>
+		<br>
+		<div class="title-wrapper">
+			<img src="assets\img\mobihelp-logo.png" alt="George Brown College Mobihelp Logo">
+			<span id="day">
+				<script type="text/javascript">
+					
+				</script>
+			</span>
+			<span id="clock" class="spacer">
+				<script type="text/javascript">
+					
+				</script>
+			</span>
+		</div>
+		<div class="main">
+			<h1>
+				Got a Question?  <strong>Just Ask!</strong>
+			</h1>
+			<h2>
+				<hr>
+				<!-- Don't remove the hr.  
+				Edit subjects below 
+				-->
+				HTML/CSS, JavaScript, PHP <br>
+				C#, Java, Python, CCNA I, and MATH!!
+			</h2>
+
+		</div>
+		<div class="footer">Other course works in <span>T127, 141, 147</span> and all <span>others</span> are welcome!</div>
+		<iframe id="mhframe" name="MHiFrame" src=""></iframe>
+		<!-- JS portion
+			Uhhhhhhhhh....
+			Thinking about adding some document.ready stuff or window.onload or document.onload.
+			Does it really matter for a page this small? 
+			Elements should load fast enough that it wouldn't matter. 
+		 -->
+		<script type="text/javascript">
+			function setDate(){
+				var eleDay = document.getElementById("day");
+				var weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+				var day = new Date();
+				eleDay.innerHTML="It's "+weekdays[day.getDay()]+(day.getDay()==5?"!!":"")+(day.getDay()==1?"...":"");
+				day.getDay()==5?eleDay.classList.add("friday"):"";
+			}
+			function startClock(){
+				var date = new Date();
+				var ampm = date.getHours()<12?"AM":"PM";
+				var h = ampm=="AM"?date.getHours():date.getHours()-12==0?12:date.getHours()-12;
+			    var m = date.getMinutes()<10?"0"+date.getMinutes():date.getMinutes();
+			    var s = date.getSeconds()<10?"0"+date.getSeconds():date.getSeconds();
+			    document.getElementById('clock').innerHTML = h+":"+m+":"+s+" "+ampm;
+			    var t = setTimeout(startClock, 500);
+			}
+			setDate();
+			startClock();
+		</script>
+		<script type="text/javascript" src="assets\js\open_site.js"></script>
+	</body>
+</html>
